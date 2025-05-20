@@ -40,18 +40,19 @@ body{
 .card{
     width: 180px;
     border-radius: 1rem;
-    background-color: #D4E09B;
+    background-color: #F19C79;
     padding: 5px;
 }
 
 .card h3{
     background-color: #F19C79;
     font-size: 18px;
+    height: auto;
     border-radius: 0 0 1rem 1rem;
     
 }
 
-img{
+.card img{
     width: 100%;
     border-radius: 1rem 1rem 0 0;
     background-color: #000;
@@ -75,4 +76,23 @@ img{
     justify-content: center;
     align-items: center;
     margin: 0 2px;
+}
+
+.content{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #F19C79;
+    border-radius: 2rem;
+}
+
+.content img{
+    width: 50%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #000;
+    justify-self: center;
 }
