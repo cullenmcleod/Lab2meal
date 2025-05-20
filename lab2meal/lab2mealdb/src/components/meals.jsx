@@ -8,12 +8,16 @@ const Meal=()=>{
     const [item, setItem] = useState();
     const [show, setShow] = useState(false);
     const [search, setSearch] = useState("");
+    const [loading, setLoading] = React.useState(true);
+
+     
     useEffect(()=>{
         fetch(url)
         .then( res => res.json()).then(data => {
             console.log(data.meals);
             setItem(data.meals);
             setShow(true);
+            setLoading(false);
         })
     },[url])
     const setIndex=(alpha) => {
@@ -25,6 +29,13 @@ const Meal=()=>{
             setUrl(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`);
             
         }
+    };
+    if (loading) {
+    return (
+        <div className="loading-box">
+            Loading...
+        </div>
+    );
     }
     return(
         <>

@@ -8,8 +8,11 @@ const RecipeIndex = ({alphaIndex}) => {
             {
                 alpha.map(item => {
                     return (
-                        <div className="NumBox "key={num++} onClick={() => alphaIndex(item)}>
-                            <h3>{item}</h3>
+                        <div className="index-wrapper">
+                            <div className="NumBox "key={num++} onClick={() => alphaIndex(item)}>
+                              <h3>{item}</h3>
+                            </div>
+
                         </div>
                     )
                 })

@@ -12,7 +12,7 @@ const MealItem=({data})=>{
                             navigate(`/${item.idMeal}`)}}>
                                
                             <img src={item.strMealThumb} alt="" />
-                            <h1>{item.idMeal}</h1>
+                            {/* <h1>{item.idMeal}</h1> */}
                             <h3>{item.strMeal}</h3>
                         </div>
                     )

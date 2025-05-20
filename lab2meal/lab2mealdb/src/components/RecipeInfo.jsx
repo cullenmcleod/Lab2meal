@@ -1,11 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 const RecipeInfo = () => {
     const [item, setItem] = React.useState(null);
     const [loading, setLoading] = React.useState(true);
     const { Mealid } = useParams();
-
+    const navigate = useNavigate();
     React.useEffect(() => {
         if (Mealid) {
             setLoading(true);
@@ -22,11 +22,14 @@ const RecipeInfo = () => {
         }
     }, [Mealid]);
 
-    if (loading) {
-        return <box>
-            {"Loading..."}
-        </box>;
-    }
+   if (loading) {
+    return (
+        <div className="loading-box">
+            Loading...
+        </div>
+    );
+}
+
 
     if (!item) {
         return <p>No recipe found.</p>;
@@ -37,7 +40,9 @@ const RecipeInfo = () => {
         <div className="content">
             <img src={item.strMealThumb} alt={item.strMeal} />
             <div className="word">
-
+                <button className="back" onClick={() => navigate("/")}>
+                    Back
+                </button>
                 <h1>{item.strMeal}</h1>
                 <h3>{item.strCategory}</h3>
                 <h3>{item.strArea}</h3>
