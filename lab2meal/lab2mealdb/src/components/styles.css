@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: lightyellow;
+}
+.main{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #cbdfbd;
+}
+.heading h1{
+    color: #000;
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding-top: 2rem;
+    margin: 1rem;
+}
+.search-bar{
+    margin: 1rem 0;
+    width: 400px;
+    height: 40px;
+    border: rgb(0, 0, 0) 2px;
+    outline: 2px;
+    border-radius: 1rem;
+    padding: 1 3rem;
+}
+.container{
+    width: 80%;
+    margin: 25px auto ;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+    grid-gap: 2rem;
+}
+
+.card{
+    width: 180px;
+    border-radius: 1rem;
+    background-color: #D4E09B;
+    padding: 5px;
+}
+
+.card h3{
+    background-color: #F19C79;
+    font-size: 18px;
+    border-radius: 0 0 1rem 1rem;
+    
+}
+
+img{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    background-color: #000;
+    
+    
+}
+
+.indexContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.NumBox{    
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #F19C79;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2px;
+}
